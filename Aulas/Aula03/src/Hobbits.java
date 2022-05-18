@@ -19,8 +19,8 @@ public class Hobbits {
 				h[z].nome = "Sam";
 			}
 
-			System.out.println(h[z].nome + " é um");
-			System.out.println("Bom nome para um hobbit");
+			System.out.println(h[z].nome + " e um bom nome para um hobbit");
+			//System.out.println("Bom nome para um hobbit");
 
 			z = z + 1;
 
