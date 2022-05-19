@@ -3,32 +3,39 @@ public class Animal {
 
 	public static void main(String[] args) {
 
-		Leao[] leaozinho = new Leao[5];
+		// Leao[] leaozinho;
+		// leaozinho = new Leao[5];
 
+		Leao[] leaozinho = new Leao[2];
+
+		Leao l0 = new Leao();
 		Leao l1 = new Leao();
-		Leao l2 = new Leao();
-		Leao l3 = new Leao();
-		Leao l4 = new Leao();
-		Leao l5 = new Leao();
 
-		leaozinho[0] = l1;
-		leaozinho[1] = l2;
-		leaozinho[2] = l3;
-		leaozinho[3] = l4;
-		leaozinho[4] = l5;
+		leaozinho[0] = l0;
+		leaozinho[1] = l1;
 
-		l2.setcapturacor("Rosa");
-		l3.setcapturacor("Vinho");
-		l4.setcapturacor("Branco");
-		l5.setcapturacor("Amarelo");
+		l0.setcapturacor("Rosa");
+
 		l1.setcapturacor("Preto");
-		
-		leaozinho[2].dormir();
-		
+
+		leaozinho[1].dormir();
+
+		// System.out.println(l1.comer());
+
 		for (Leao leoa : leaozinho) {
 			System.out.println("A cor do Leao é " + leoa.getretornacor());
 		}
 
+		Gato[] miau= new Gato[3];
+
+		Gato g1 = new Gato();
+		Gato g2 = new Gato();
+
+		miau[0] = g1;
+		miau[1] = g2;
+		
+		
+		
 	}
 
 }

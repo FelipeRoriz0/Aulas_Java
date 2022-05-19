@@ -21,7 +21,6 @@ public class AppString {
 		p1.setCor("Azul");
 		p2.setCor("Marrom");
 
-		
 		filhotes[0] = p1;
 		filhotes[1] = p2;
 		filhotes[2] = new Pelicano();
