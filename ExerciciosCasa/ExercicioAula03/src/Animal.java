@@ -23,19 +23,17 @@ public class Animal {
 		// System.out.println(l1.comer());
 
 		for (Leao leoa : leaozinho) {
-			System.out.println("A cor do Leao é " + leoa.getretornacor());
+			System.out.println("A cor do Leao do " + leoa.getretornacor());
 		}
 
-		Gato[] miau= new Gato[3];
+		Gato[] miau = new Gato[3];
 
 		Gato g1 = new Gato();
 		Gato g2 = new Gato();
 
 		miau[0] = g1;
 		miau[1] = g2;
-		
-		
-		
+
 	}
 
 }

@@ -1,9 +1,10 @@
+package animais;
 
 public class Gato {
 	private String cor;
 	private int peso;
 	private int tamanho;
-
+	private String nome;
 
 	public String getretornaCor() {
 		return cor;
@@ -28,22 +29,32 @@ public class Gato {
 	public void setcapturaPeso(int peso) {
 		this.peso = peso;
 	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
 	/// Metodos
+
 
 	public String comer() {
 		return "O gato está comendo...";
 	}
 
-	public void dormir() {
-		System.out.println("O gato esta dormindo");
+	public String dormir() {
+		return "O gato esta dormindo";
 	}
 
-	public void brincar() {
-		System.out.println("O gato esta brincando");
+	public String brincar() {
+		return "O gato esta brincando";
 	}
 
-	public void emitirSom() {
-		System.out.println("MIAAUUUUUUU");
+	public String emitirSom() {
+		return "MIAAUUUUUUU";
 	}
 
 }
