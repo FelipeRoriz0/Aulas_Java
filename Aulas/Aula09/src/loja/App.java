@@ -6,12 +6,13 @@ import java.util.Scanner;
 
 public class App {
 	public static void main(String[] args) {
-		int opcao;
+		int opcao, estrela;
 		Cliente cliente;
 		String nome, telefone, excluir;
 		int idade;
+		int avali;
 
-		// Criação do array list
+		// Criacao do array list
 		List<Cliente> banco = new ArrayList<Cliente>();
 		App app = new App();
 
@@ -25,9 +26,11 @@ public class App {
 			System.out.println("3 - Media das idades");
 			System.out.println("4 - Alterar cliente");
 			System.out.println("5 - Excluir cliente");
-			System.out.println("6 - Fim");
+			System.out.println("6 - Classifique cliente");
+			System.out.println("7 - Melhores Clientes");
+			System.out.println("8 - F I M ");
 			System.out.println("-----------------");
-			System.out.println("Digite uma opção:");
+			System.out.println("Digite uma opcao:");
 
 			opcao = teclado.nextInt();
 
@@ -63,16 +66,56 @@ public class App {
 			else if (opcao == 3) {
 				System.out.println("A media das idades e: " + app.calcularMedia(banco));
 			} else if (opcao == 4) {
-				System.out.println();
-			} else if (opcao == 5) {
-				System.out.println("Qual  desejar deletar");
+
+				System.out.println("Quem voce deseja alterar ?");
+				int i = teclado.nextInt();
+
+				Cliente alteraCliente = banco.get(i);
+
+				System.out.println("Digite o novo nome");
 				nome = teclado.next();
-				
-				banco.remove(nome);
+
+				System.out.println("Digite o nome telefone");
+				telefone = teclado.next();
+
+				System.out.println("Digite a idade");
+				idade = teclado.nextInt();
+
+				alteraCliente.setNome(nome);
+				alteraCliente.setTelefone(telefone);
+				alteraCliente.setIdade(idade);
+
+			} else if (opcao == 5) {
+				System.out.println("Quem voce desejar deletar");
+				banco.remove(teclado.nextInt());
+
+			} else if (opcao == 6) {
+
+				System.out.println("Quem voce deseja classificar ?");
+				int a = teclado.nextInt();
+
+				Cliente classificao = banco.get(a);
+
+				System.out.println(banco.get(a));
+
+				System.out.println("Qual e a classificacao do " + banco.get(a) + " 1 ao 5");
+				avali = teclado.nextInt();
+
+				classificao.setClassi(avali);
 
 			}
 
-		} while (opcao < 6);
+			else if (opcao == 7) {
+				for (Cliente cla : banco) {
+					if (cla.getClassi() > 4) {
+						System.out.println("Melhor cliente " + cla.getNome());
+
+					}
+
+				}
+			}
+
+		} while (opcao < 8);
 		teclado.close();
 
 	}
