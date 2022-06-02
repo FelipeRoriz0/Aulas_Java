@@ -37,7 +37,7 @@ public class Tela {
 	public Cliente listarCliente(List<Cliente> banco) {
 		// Listar Clientes
 		for (Cliente c : banco) {
-			System.out.println(banco.indexOf(c) + " - " + c.getTelefone() + " - " + c.getIdade());
+			System.out.println(banco.indexOf(c) + " - " + c.getNome() + c.getTelefone() + " - " + c.getIdade());
 			// Calcular Media das idades
 
 		}

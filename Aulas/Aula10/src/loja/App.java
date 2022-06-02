@@ -21,8 +21,7 @@ public class App {
 			menu.desenharMenu();
 			opcao = teclado.nextInt();
 			
-			tela.desenharIncluir();
-
+			controle.avaliarOpcao(opcao);
 		} while (opcao < 8);
 
 		teclado.close();

@@ -20,18 +20,23 @@ public class Controle {
 
 		} else if (opcao == 2) {
 			// Listar Clientes
-			banco.add(tela.listarCliente(banco));
+			tela.listarCliente(banco);
 		} else if (opcao == 3) {
-			// Calcular a média da idade
+			// Calcular a mï¿½dia da idade
+			tela.exbirMedia(banco);
 		} else if (opcao == 4) {
 			// Alterar Cliente
+			tela.alteraCliente(banco);
 		} else if (opcao == 5) {
 			// Excluir Cliente
+			tela.excluirCliente(banco);
 		} else if (opcao == 6) {
 			// Classifique Clientes
+			tela.classificaCliente(banco);
 		}
 		else if (opcao == 7) {
 			// Melhores Clientes
+			tela.melhorCliente(banco);
 		}
 	}
 }
