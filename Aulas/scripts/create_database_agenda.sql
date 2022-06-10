@@ -10,5 +10,9 @@ senha VARCHAR(20) NOT NULL
 );
 
 INSERT INTO tb_usuarios(nome, usuario, senha) VALUES('Administrador', 'admin', '12345');
+INSERT INTO tb_usuarios(nome, usuario, senha) VALUES('Danilo002' , 'Danilo', '123'); 
+
+
+INSERT INTO tb_usuarios(nome, usuario, senha) VALUES('Felipe002' , 'Felipe', '123'); 
 
 SELECT * FROM tb_usuarios;
