@@ -27,14 +27,12 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		String Usuario = request.getParameter("usuario");
-
 		String Senha = request.getParameter("senha");
 		Usuario u = null;
-		
+
 		HttpSession session = request.getSession();
-		
+
 		UsuarioDAO dao = new UsuarioDAO();
 
 		u = dao.consultarUsuario(Usuario, Senha);

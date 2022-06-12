@@ -33,6 +33,7 @@ public class UsuarioDAO {
 				usuario.setNome(rs.getString("nome"));
 				usuario.setUsuario(rs.getString("usuario"));
 				usuario.setSenha(rs.getString("senha"));
+				usuario.setFoto(rs.getString("foto"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -61,7 +62,8 @@ public class UsuarioDAO {
 				usuario.setNome(rs.getString("nome"));
 				usuario.setUsuario(rs.getString("usuario"));
 				usuario.setSenha(rs.getString("senha"));
-
+				usuario.setFoto(rs.getString("foto"));
+				
 				listaDeUsuarios.add(usuario);
 			}
 

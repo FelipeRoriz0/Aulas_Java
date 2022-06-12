@@ -46,16 +46,19 @@
 
 				<td><img src="imagens/edit.png" width=24px></td>
 
-				<td>
-				<!-- ERRO <a href="delete.jsp?id=<%usuario.getId()%>"><img src="imagens/delete.png" width="24px"/></a> -->
+				<td><a href="delete.jsp?id=<%=usuario.getId()%>"><img
+						src="imagens/delete.png" width="24px" /></a></td>
+
+				<td><img src="<%=usuario.getFoto()%>" width="50px" /></td>
 				
-				</td>
-			
 			</tr>
+			
 			<%
 			}
 			%>
-
+				
+				
+				
 		</table>
 		<div>
 			<nav>

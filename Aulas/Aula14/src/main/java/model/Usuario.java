@@ -5,6 +5,7 @@ public class Usuario {
 	private String nome;
 	private String usuario;
 	private String senha;
+	private String foto;
 	
 	public int getId() {
 		return id;
@@ -31,9 +32,16 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
+	public String getFoto() {
+		return foto;
+	}
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", nome=" + nome + ", usuario=" + usuario + ", senha=" + senha + "]";
+		return "Usuario [id=" + id + ", nome=" + nome + ", usuario=" + usuario + ", senha=" + senha  +"]";
 	}
 	
 	
