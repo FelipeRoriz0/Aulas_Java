@@ -1,0 +1,21 @@
+package servico;
+
+import dao.UsuarioDAO;
+import model.Usuario;
+
+public class UsuarioServico {
+	UsuarioDAO usuario = new UsuarioDAO();
+
+	public boolean incluir(Usuario usr) {
+		return usuario.incluirUsuario(usr);
+
+	}
+
+	public boolean excluir(String id) {
+		int idUsuario;
+
+		idUsuario = Integer.parseInt(id);
+
+		return usuario.excluirUsuario(idUsuario);
+	}
+}
