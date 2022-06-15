@@ -56,7 +56,9 @@
 
 				<td><%=usuario.getUsuario()%></td>
 
-				<td><img src="imagens/edit.png" width=24px></td>
+				<td>
+					<a href="alterar.jsp?id=<%=usuario.getId()%>"><img src="imagens/edit.png" width="24px"/></a>				
+				</td>
 				<td><a href="ExcluirUsuarioServlet?id=<%=usuario.getId()%>"><img
 						src="imagens/delete.png" width="24px" /></a></td>
 				<td><img src="<%=usuario.getFoto()%>" width="50px" /></td>

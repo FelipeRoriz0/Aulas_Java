@@ -12,6 +12,35 @@ import model.Usuario;
 public class UsuarioDAO {
 	Connection cnx = null;
 	
+	public boolean alterarUsuario(Usuario usuario) {
+		boolean resultado = true;
+		int retornoQuery;
+		
+		cnx = DAO.createConnection();
+		
+		String sql = "UPDATE tb_usuarios SET nome=?, usuario=?, senha=? WHERE id=?";
+		
+		try {
+			PreparedStatement ps = cnx.prepareStatement(sql);
+			
+			ps.setString(1, usuario.getNome());
+			ps.setString(2, usuario.getUsuario());
+			ps.setString(3, usuario.getSenha());
+			ps.setInt(4, usuario.getId());
+			
+			retornoQuery = ps.executeUpdate();
+			
+			if(retornoQuery <= 0) {
+				resultado = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return resultado;
+		
+	}
+	
 	public boolean incluirUsuario(Usuario usuario) {
 		boolean resultado = true;
 		int retornoQuery;

@@ -7,7 +7,7 @@
 <title>Tela de inclusão</title>
 </head>
 <body>
-	<form action="IncluirUsuarioServlet" method="post">
+	<form action="AlterarUsuarioServlet" method="post">
 		<label> Nome: </label>
 		<input type="text" name="nome" id="nome" placeholder="nome do usuario" size="40"/> <br>
 		<label> Usuario: </label>
