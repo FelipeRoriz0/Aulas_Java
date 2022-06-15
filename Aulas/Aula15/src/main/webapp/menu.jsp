@@ -57,7 +57,7 @@
 				<td><%=usuario.getUsuario()%></td>
 
 				<td>
-					<a href="alterar.jsp?id=<%=usuario.getId()%>"><img src="imagens/edit.png" width="24px"/></a>				
+					<a href="PrepararAlteracaoUsuario?id=<%=usuario.getId()%>"><img src="imagens/edit.png" width="24px"/></a>				
 				</td>
 				<td><a href="ExcluirUsuarioServlet?id=<%=usuario.getId()%>"><img
 						src="imagens/delete.png" width="24px" /></a></td>
@@ -76,7 +76,7 @@
 			<nav>
 				<ul>
 					<li><a href="cadastrar.jsp">Incluir Usuario</a>
-					<li><a href="index.html">Logout </a></li>
+					<li><a href="LogoutServlet">Logout </a></li>
 				</ul>
 			</nav>
 		</div>
